@@ -1,0 +1,58 @@
+{
+  "name": "markdown-rdview-support",
+  "displayName": "Markdown RDView Support",
+  "description": "Make the Rhythm Doctor Editor event bar interface easily rendered on Markdown.",
+  "author": {
+    "name": "obugs"
+  },
+  "icon": "./rdview_icon.png",
+  "version": "0.0.1",
+  "publisher": "obugs",
+  "private": true,
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Other",
+    "Extension Packs"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "markdown.markdownItPlugins": true,
+    "markdown.previewStyles": [
+      "./src/RDView.css"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OLDRedstone/markdown-rdview-support.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OLDRedstone/markdown-rdview-support/issues"
+  },
+  "homepage": "https://github.com/OLDRedstone/markdown-rdview-support#readme",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "@types/mocha": "^10.0.8",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.94.0",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.11.1",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.0"
+  }
+}
