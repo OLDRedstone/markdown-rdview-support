@@ -25,7 +25,7 @@ The plugin includes autocomplete for some keywords.
 
 May be useful when writing Rhythm Doctor tutorials.
 
-> Note: This will not help you generate a level file.
+> Note: This will **NOT** help you generate a level file.
 
 ## Release Notes
 
@@ -33,5 +33,5 @@ May be useful when writing Rhythm Doctor tutorials.
 
 Almost all events can be shown.
 
-[rdview]: rdviewtheme.png
-[tutorial1]: tutorial01.png
+[rdview]: https://github.com/OLDRedstone/markdown-rdview-support/blob/main/rdviewtheme.png
+[tutorial1]: https://github.com/OLDRedstone/markdown-rdview-support/blob/main/tutorial01.png

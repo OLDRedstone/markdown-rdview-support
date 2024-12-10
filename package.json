@@ -3,10 +3,11 @@
   "displayName": "Markdown RDView Support",
   "description": "Make the Rhythm Doctor Editor event bar interface easily rendered on Markdown.",
   "author": {
-    "name": "obugs"
+    "name": "obugs",
+    "url": "https://github.com/OLDRedstone"
   },
-  "icon": "./rdview_icon.png",
-  "version": "0.0.1",
+  "icon": "rdview_icon.png",
+  "version": "0.0.3",
   "publisher": "obugs",
   "private": true,
   "engines": {
@@ -21,7 +22,53 @@
   "contributes": {
     "markdown.markdownItPlugins": true,
     "markdown.previewStyles": [
-      "./src/RDView.css"
+      "./rdview.css"
+    ],
+    "languages": [
+      {
+        "id": "rdview",
+        "extensions": [
+          ".rdview",
+          ".rdv"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "rdview",
+        "scopeName": "markdown.rdview.codeblock",
+        "path": "./syntaxes/rdview.tmLanguage-markdown.json"
+      },
+      {
+        "scopeName": "markdown.rdview.codeblock",
+        "path": "./syntaxes/rdview.tmLanguage-markdown.json",
+        "injectTo": ["text.html.markdown"],
+        "embeddedLanguages": {
+          "meta.embedded.block.rdview": "rdview"
+        }
+      },
+      {
+        "language": "rdview",
+        "scopeName": "text.rdview",
+        "path": "./syntaxes/rdview.tmLanguage.json"
+      }
+    ],
+    "configuration":[
+      {
+        "title": "RDView",
+        "properties": {
+          "markdown-rdview-support.reloadconfiguration": {
+            "type": "boolean",
+            "default": true,
+            "description": "Resetting the Configuration at the Next VSCode Startup."
+          },
+          "markdown-rdview-support.removeconfiguration": {
+            "type": "boolean",
+            "default": false,
+            "description": "Remove all configurations at the next VSCode startup."
+          }
+        }
+      }
     ]
   },
   "repository": {
@@ -40,19 +87,25 @@
     "lint": "eslint src",
     "test": "vscode-test"
   },
+  "files": [
+    "src",
+    "assets",
+    "rdview_icon.png",
+    "rdview.css",
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "syntaxes",
+    "themes"
+  ],
   "devDependencies": {
     "@types/markdown-it": "^14.1.2",
     "@types/mocha": "^10.0.8",
     "@types/node": "20.x",
     "@types/vscode": "^1.94.0",
     "@typescript-eslint/eslint-plugin": "^8.7.0",
-    "@typescript-eslint/parser": "^8.7.0",
-    "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1",
-    "eslint": "^9.11.1",
-    "typescript": "^5.6.2"
-  },
-  "dependencies": {
-    "markdown-it": "^14.1.0"
+    "eslint": "^8.7.0",
+    "typescript": "^4.5.4",
+    "vscode-test": "^1.6.0"
   }
 }

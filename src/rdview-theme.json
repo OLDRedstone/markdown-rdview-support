@@ -1,0 +1,246 @@
+{
+	"light": [
+		{
+			"scope": "sounds.type.event.rdview",
+			"settings": {
+				"foreground": "#520000",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"scope": "rows.type.event.rdview",
+			"settings": {
+				"foreground": "#042072",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"scope": "actions.type.event.rdview",
+			"settings": {
+				"foreground": "#720D9E",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"scope": "decorations.type.event.rdview",
+			"settings": {
+				"foreground": "#00803A",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"scope": "rooms.type.event.rdview",
+			"settings": {
+				"foreground": "#806300",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"scope": "custom.type.event.rdview",
+			"settings": {
+				"foreground": "#3b3b3b",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"scope": "position.event.rdview",
+			"settings": {
+				"foreground": "#02527e"
+			}
+		},
+		{
+			"scope": "position.group.rdview",
+			"settings": {
+				"foreground": "#02527e"
+			}
+		},
+		{
+			"scope": "key.property.rdview",
+			"settings": {
+				"foreground": "#502616"
+			}
+		},
+		{
+			"scope": "value.property.rdview",
+			"settings": {
+				"foreground": "#0451AD"
+			}
+		},
+		{
+			"scope": "scale.group.rdview",
+			"settings": {
+				"foreground": "#CE9178"
+			}
+		},
+		{
+			"scope": "color.group.rdview",
+			"settings": {
+				"foreground": "#176934"
+			}
+		},
+		{
+			"scope": "properties.open.event.rdview",
+			"settings": {
+				"foreground": "#6d5b00"
+			}
+		},
+		{
+			"scope": "properties.close.event.rdview",
+			"settings": {
+				"foreground": "#6d5b00"
+			}
+		},
+		{
+			"scope": "list.open.group.rdview",
+			"settings": {
+				"foreground": "#179FF1"
+			}
+		},
+		{
+			"scope": "list.close.group.rdview",
+			"settings": {
+				"foreground": "#179FF1"
+			}
+		},
+		{
+			"scope": "xs.value.property.rdview",
+			"settings": {
+				"foreground": "#02DA37"
+			}
+		},
+		{
+			"scope": "size.group.rdview",
+			"settings": {
+				"foreground": "#02527e"
+			}
+		},
+		{
+			"scope": "scale.rdview",
+			"settings": {
+				"foreground": "#CE9178"
+			}
+		}
+	],
+	"dark": [
+		{
+			"scope": "sounds.type.event.rdview",
+			"settings": {
+				"foreground": "#D92433",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"scope": "rows.type.event.rdview",
+			"settings": {
+				"foreground": "#2C4FDB",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"scope": "actions.type.event.rdview",
+			"settings": {
+				"foreground": "#C544B3",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"scope": "decorations.type.event.rdview",
+			"settings": {
+				"foreground": "#00C459",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"scope": "rooms.type.event.rdview",
+			"settings": {
+				"foreground": "#D8B811",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"scope": "custom.type.event.rdview",
+			"settings": {
+				"foreground": "#A8A8A8",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"scope": "position.event.rdview",
+			"settings": {
+				"foreground": "#9CDCFE"
+			}
+		},
+		{
+			"scope": "position.group.rdview",
+			"settings": {
+				"foreground": "#9CDCFE"
+			}
+		},
+		{
+			"scope": "key.property.rdview",
+			"settings": {
+				"foreground": "#CE9178"
+			}
+		},
+		{
+			"scope": "value.property.rdview",
+			"settings": {
+				"foreground": "#9CDCFE"
+			}
+		},
+		{
+			"scope": "scale.group.rdview",
+			"settings": {
+				"foreground": "#CE9178"
+			}
+		},
+		{
+			"scope": "color.group.rdview",
+			"settings": {
+				"foreground": "#73C991"
+			}
+		},
+		{
+			"scope": "properties.open.event.rdview",
+			"settings": {
+				"foreground": "#FFD709"
+			}
+		},
+		{
+			"scope": "properties.close.event.rdview",
+			"settings": {
+				"foreground": "#FFD709"
+			}
+		},
+		{
+			"scope": "list.open.group.rdview",
+			"settings": {
+				"foreground": "#179FF1"
+			}
+		},
+		{
+			"scope": "list.close.group.rdview",
+			"settings": {
+				"foreground": "#179FF1"
+			}
+		},
+		{
+			"scope": "xs.value.property.rdview",
+			"settings": {
+				"foreground": "#02DA37"
+			}
+		},
+		{
+			"scope": "size.rdview",
+			"settings": {
+				"foreground": "#9CDCFE"
+			}
+		},
+		{
+			"scope": "scale.rdview",
+			"settings": {
+				"foreground": "#CE9178"
+			}
+		}
+	]
+}

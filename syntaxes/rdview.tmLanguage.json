@@ -1,0 +1,81 @@
+{
+  "scopeName": "text.rdview",
+  "patterns": [
+    { "include": "#rdview-event" },
+    { "include": "#rdview-group" },
+    { "include": "#rdview-event-list" },
+    { "include": "#rdview-properties" },
+    { "include": "#rdview-end-line" }
+  ],
+  "repository": {
+		"rdview-event": {
+      "name": "event.rdview",
+      "match": "(([Ee][Ss]\\.\\w+)|([Ee][Bb]\\.\\w+)|([Ee][Aa]\\.\\w+)|([Ee][Dd]\\.\\w+)|([Ee][Rr]\\.\\w+)|([Ee][Cc]\\.\\w+))(\\s+\\d+(\\.\\d*)?\\s*\\d*)?",
+      "captures": {
+        "2": {"name": "sounds.type.event.rdview"},
+        "3": {"name": "rows.type.event.rdview"},
+        "4": {"name": "actions.type.event.rdview"},
+        "5": {"name": "decorations.type.event.rdview"},
+        "6": {"name": "rooms.type.event.rdview"},
+        "7": {"name": "custom.type.event.rdview"},
+        "8": {"name": "position.event.rdview"}
+      }
+		},
+		"rdview-group": {
+      "name": "group.rdview",
+      "match": "[Gg](\\s+(\\d+(\\.\\d*)?)?\\s*\\d*)?(\\s+(\\d+(\\.\\d*)?)?\\s*\\d*)?\\s*(#([0-9A-Fa-f]{8}|[0-9A-Fa-f]{6}|[0-9A-Fa-f]{3,4}))",
+      "captures": {
+        "1": {"name": "position.group.rdview"},
+        "4": {"name": "scale.group.rdview"},
+        "7": {"name": "color.group.rdview"}
+      }
+		},
+		"rdview-property": {
+      "name": "property.rdview",
+      "match": "(\\w+)\\s*=\\s*(([-xX]{6})|[^,\\]]+),?",
+      "captures": {
+        "1": {"name": "key.property.rdview"},
+        "2": {"name": "value.property.rdview"},
+        "3": {"name": "xs.value.property.rdview"}
+      }
+		},
+    "rdview-properties":{
+      "name": "properties.rdview",
+      "begin": "\\[",
+      "beginCaptures": {
+        "0": {"name": "properties.open.event.rdview"}
+      },
+      "end": "\\]",
+      "endCaptures": {
+        "0": {"name": "properties.close.event.rdview"}
+      },
+      "patterns": [
+        {"include": "#rdview-property" }
+      ]
+    },
+    "rdview-event-list": {
+      "name": "event-list.rdview",
+      "begin": "\\{",
+      "beginCaptures": {
+        "0": {"name": "list.open.group.rdview"}
+      },
+      "end": "\\};",
+      "endCaptures": { 
+        "0": { "name": "list.close.group.rdview"}
+      },
+      "patterns": [
+        { "include": "#rdview-event" },
+        { "include": "#rdview-group" },
+        { "include": "#rdview-event-list" },
+        { "include": "#rdview-properties" }
+      ]
+    },
+    "rdview-end-line": {
+      "name": "end-line.rdview",
+      "match": ";",
+      "captures": {
+        "0": {"name": "end.line.rdview"}
+      }
+    }
+  }
+}
