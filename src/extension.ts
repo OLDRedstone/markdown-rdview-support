@@ -3,8 +3,6 @@ import * as rd from './rdview';
 import * as vscode from 'vscode';
 import * as completion from './completion';
 import * as themeColors from './rdview-theme.json';
-import * as fs from 'fs';
-import * as path from 'path';
 
 export function activate(context: vscode.ExtensionContext) {
 	completion.Init(context);

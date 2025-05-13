@@ -1,5 +1,5 @@
 import vscode, { CompletionItem, CompletionItemKind, CompletionList, SnippetString } from 'vscode';
-import tilePosition from './position.json';
+import * as rd from './rdview';
 
 function provideCompletionItemsMarkdown(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CompletionContext): CompletionList<CompletionItem> | null {
 
@@ -55,23 +55,23 @@ function MatchCompletionItem(lineText: string): CompletionList<CompletionItem> |
 	var isBeat = false;
 	switch (true) {
 		case /es\.$/g.test(lineText):
-			collection = tilePosition.events.sounds;
+			collection = rd.tilePosition.events.sounds;
 			break;
 		case /eb\.$/g.test(lineText):
-			collection = tilePosition.events.rows;
+			collection = rd.tilePosition.events.rows;
 			isBeat = true;
 			break;
 		case /ea\.$/g.test(lineText):
-			collection = tilePosition.events.actions;
+			collection = rd.tilePosition.events.actions;
 			break;
 		case /ed\.$/g.test(lineText):
-			collection = tilePosition.events.decorations;
+			collection = rd.tilePosition.events.decorations;
 			break;
 		case /er\.$/g.test(lineText):
-			collection = tilePosition.events.rooms;
+			collection = rd.tilePosition.events.rooms;
 			break;
 		case /ec\.$/g.test(lineText):
-			collection = tilePosition.events.custom;
+			collection = rd.tilePosition.events.custom;
 			break;
 		default:
 			break;
@@ -79,7 +79,7 @@ function MatchCompletionItem(lineText: string): CompletionList<CompletionItem> |
 	if (collection) {
 		collection.map((i) => list.items.push({ label: i.name, insertText: new SnippetString(`${i.name} \$\{1:0 0}[$2];`), kind: CompletionItemKind.Text }));
 		if (isBeat) {
-			tilePosition.events.beatsSpecial.map(i => list.items.push({ label: i, insertText: new SnippetString(`${i} \$\{1:0 0\}[$2]];`), kind: CompletionItemKind.Text }));
+			rd.tilePosition.events.beatsSpecial.map(i => list.items.push({ label: i, insertText: new SnippetString(`${i} \$\{1:0 0\}[$2]];`), kind: CompletionItemKind.Text }));
 		}
 	}
 	return list;
